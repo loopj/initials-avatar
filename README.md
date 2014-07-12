@@ -3,6 +3,7 @@ Initials Avatar
 
 Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback.
 
+
 ## Dependencies
 
 This app requires ImageMagicks and Ghostscript to be available on your machine.
@@ -11,6 +12,7 @@ This app requires ImageMagicks and Ghostscript to be available on your machine.
 $ brew install imagemagick ghostscript
 ```
 
+
 ## Starting the Server
 
 This app is built with Sinatra, so I recommend using the `rackup` command:
@@ -18,6 +20,18 @@ This app is built with Sinatra, so I recommend using the `rackup` command:
 ```shell
 $ rackup
 ```
+
+
+## Mounting Under a Rails App
+
+If you'd like to run this from inside an existing rails app, you can mount it as follows in `config/routes.rb`:
+
+```ruby
+match "/initials-avatar" => InitialsAvatar, :anchor => false
+```
+
+You can then access avatars at /initials-avatar/:initials from your rails app.
+
 
 ## Usage
 
@@ -38,6 +52,7 @@ $ rackup
     ```
     http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fexample.com%2FJD
     ```
+
 
 ## TODO
 
