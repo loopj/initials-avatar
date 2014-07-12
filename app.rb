@@ -16,6 +16,10 @@ Y_OFFSET = 0.04
 RESIZE_FILTER = Magick::TriangleFilter
 RESIZE_BLUR = 0.8
 
+get "/" do
+  redirect "https://github.com/loopj/initials-avatar"
+end
+
 get "/:initials" do
   content_type "image/png"
 

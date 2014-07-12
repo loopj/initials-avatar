@@ -8,7 +8,15 @@ Generate an avatar image from a user's initials, ideal for use as a meaningful g
 This app requires ImageMagicks and Ghostscript to be available on your machine.
 
 ```shell
-brew install imagemagick ghostscript
+$ brew install imagemagick ghostscript
+```
+
+## Starting the Server
+
+This app is built with Sinatra, so I recommend using the `rackup` command:
+
+```shell
+$ rackup
 ```
 
 ## Usage
@@ -16,13 +24,13 @@ brew install imagemagick ghostscript
 -   Generate a 100x100 PNG initials avatar for the initials *JD* as follows:
 
     ```
-    http://example.com/jd
+    http://localhost:9292/jd
     ```
 
 -   Generate an initials avatar with a specific size:
 
     ```
-    http://example.com/jd?s=80
+    http://localhost:9292/jd?s=80
     ```
 
 -   Use initials as a fallback for Gravatar:
