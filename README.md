@@ -1,7 +1,9 @@
 Initials Avatar
 ---------------
 
-Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback.
+Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback. For example:
+
+![Example avatar](example.png)
 
 
 ## Dependencies
