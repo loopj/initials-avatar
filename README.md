@@ -8,10 +8,25 @@ Generate an avatar image from a user's initials, ideal for use as a meaningful g
 
 ## Dependencies
 
-This app requires ImageMagicks and Ghostscript to be available on your machine.
+This app requires ImageMagick and Ghostscript to be available.
+
+### Mac
 
 ```shell
 $ brew install imagemagick ghostscript
+```
+
+### Ubuntu
+
+```shell
+$ sudo apt-get install imagemagick
+```
+
+
+## Installation
+
+```shell
+bundle install
 ```
 
 
