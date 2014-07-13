@@ -19,7 +19,7 @@ $ brew install imagemagick ghostscript
 ### Ubuntu
 
 ```shell
-$ sudo apt-get install imagemagick
+$ sudo apt-get install build-essential imagemagick
 ```
 
 
