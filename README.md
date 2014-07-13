@@ -19,7 +19,7 @@ $ brew install imagemagick ghostscript
 ### Ubuntu
 
 ```shell
-$ sudo apt-get install ruby-dev imagemagick
+$ sudo apt-get install ruby-dev libmagickwand-dev imagemagick
 ```
 
 
