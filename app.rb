@@ -32,7 +32,7 @@ class InitialsAvatar < Sinatra::Base
     end
 
     # Create the text annotation
-    Magick::Draw.new.annotate(img, canvas_size,canvas_size,0,canvas_size*Y_OFFSET, params[:initials].upcase) do
+    Magick::Draw.new.annotate(img, canvas_size,canvas_size,0,canvas_size*Y_OFFSET, params[:initials][0..2].upcase) do
       self.fill = "#000000"
       self.gravity = Magick::CenterGravity
       self.pointsize = canvas_size*FONT_RATIO
