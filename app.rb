@@ -1,5 +1,3 @@
-require "rmagick"
-
 class InitialsAvatar < Sinatra::Base
   # Canvas sizes
   DEFAULT_OUTPUT_SIZE = 100
