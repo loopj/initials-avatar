@@ -50,14 +50,6 @@ $ docker run -p 80:80 loopj/initials-avatar
 ```
 
 
-### Passenger Standalone
-
-If you wish to run this in production, [Passenger Standalone](https://www.phusionpassenger.com/documentation/Users%20guide%20Standalone.html) is a great solution:
-
-```shell
-$ sudo passenger start --daemonize --port 80
-```
-
 ### Mounting Under a Rails App
 
 If you'd like to run this from inside an existing rails app, you can mount it as follows in `config/routes.rb`:
