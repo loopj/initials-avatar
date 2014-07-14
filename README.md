@@ -3,7 +3,7 @@ Initials Avatar
 
 Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback. For example:
 
-![Example avatar](example.png)
+![Example avatar](http://initials.me/jd)
 
 
 ## Dependencies
@@ -42,7 +42,7 @@ $ rackup
 
 ### Docker
 
-You can run this in production in [Docker](https://docker.com) as follows:
+You can run this in production using [Docker](https://docker.com) as follows:
 
 ```shell
 $ docker pull loopj/initials-avatar
@@ -66,19 +66,19 @@ You can then access avatars at /initials-avatar/:initials from your rails app.
 Generate a 100x100 avatar for the initials *JD*:
 
 ```
-http://localhost:9292/jd
+http://initials.me/jd
 ```
 
 Generate an 80x80 avatar for the initials *JS*:
 
 ```
-http://localhost:9292/js?s=80
+http://initials.me/js?s=80
 ```
 
 Show the [Gravatar](http://gravatar.com) for a particular user, and fallback to showing their initials (*JD*) if the Gravatar doesn't exist:
 
 ```
-http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fexample.com%2FJD
+http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Finitials.me%2Fjd
 ```
 
 
