@@ -18,7 +18,7 @@ class InitialsAvatar < Sinatra::Base
     redirect "https://github.com/loopj/initials-avatar"
   end
 
-  get "/:initials" do
+  get "/:initials.?:format?" do
     content_type "image/png"
 
     # Output/canvas sizes
