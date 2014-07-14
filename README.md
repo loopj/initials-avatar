@@ -40,6 +40,16 @@ For running locally, I recommend using the `rackup` command:
 $ rackup
 ```
 
+### Docker
+
+You can run this in production in [Docker](https://docker.com) as follows:
+
+```shell
+$ docker pull loopj/initials-avatar
+$ docker run -p 80:80 loopj/initials-avatar
+```
+
+
 ### Passenger Standalone
 
 If you wish to run this in production, [Passenger Standalone](https://www.phusionpassenger.com/documentation/Users%20guide%20Standalone.html) is a great solution:
