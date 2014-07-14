@@ -11,8 +11,8 @@ class InitialsAvatar < Sinatra::Base
 
   # Resize filter and sharpness settings
   # See http://stackoverflow.com/a/13243833/102542 for samples
-  RESIZE_FILTER = Magick::TriangleFilter
-  RESIZE_BLUR = 0.8
+  RESIZE_FILTER = Magick::LagrangeFilter
+  RESIZE_BLUR = 1
 
   get "/" do
     redirect "https://github.com/loopj/initials-avatar"
