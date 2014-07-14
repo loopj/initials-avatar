@@ -8,7 +8,7 @@ Generate an avatar image from a user's initials, ideal for use as a meaningful g
 
 ## Dependencies
 
-This app requires ImageMagick and Ghostscript to be available.
+This app requires [ImageMagick](http://www.imagemagick.org/) and [Ghostscript](http://www.ghostscript.com/) to be installed:
 
 ### Mac
 
@@ -32,14 +32,23 @@ bundle install
 
 ## Starting the Server
 
-This app is built with Sinatra, so I recommend using the `rackup` command:
+### Rackup
+
+For running locally, I recommend using the `rackup` command:
 
 ```shell
 $ rackup
 ```
 
+### Passenger Standalone
 
-## Mounting Under a Rails App
+If you wish to run this in production, [Passenger Standalone](https://www.phusionpassenger.com/documentation/Users%20guide%20Standalone.html) is a great solution:
+
+```shell
+$ sudo passenger start --daemonize --port 80
+```
+
+### Mounting Under a Rails App
 
 If you'd like to run this from inside an existing rails app, you can mount it as follows in `config/routes.rb`:
 
@@ -52,23 +61,23 @@ You can then access avatars at /initials-avatar/:initials from your rails app.
 
 ## Usage
 
--   Generate a 100x100 PNG initials avatar for the initials *JD* as follows:
+Generate a 100x100 avatar for the initials *JD*:
 
-    ```
-    http://localhost:9292/jd
-    ```
+```
+http://localhost:9292/jd
+```
 
--   Generate an initials avatar with a specific size:
+Generate an 80x80 avatar for the initials *JS*:
 
-    ```
-    http://localhost:9292/jd?s=80
-    ```
+```
+http://localhost:9292/js?s=80
+```
 
--   Use initials as a fallback for Gravatar:
+Show the [Gravatar](http://gravatar.com) for a particular user, and fallback to showing their initials (*JD*) if the Gravatar doesn't exist:
 
-    ```
-    http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fexample.com%2FJD
-    ```
+```
+http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fexample.com%2FJD
+```
 
 
 ## TODO
