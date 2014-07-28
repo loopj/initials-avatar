@@ -5,6 +5,13 @@ Generate an avatar image from a user's initials, ideal for use as a meaningful g
 
 ![Example avatar](http://initials.me/jd)
 
+Changing the background or foreground color is as easy as passing the values through the query string
+
+![Example avatar](http://initials.me/jd?bg=SkyBlue&fg=White)
+
+You can even use the hex colors just remember to omit the '#' sign
+
+![Example avatar](http://initials.me/jd?bg=87CEEB&fg=FFF)
 
 ## Dependencies
 
@@ -86,4 +93,3 @@ http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fi
 
 -   Image caching
 -   Font selection
--   Color selection
