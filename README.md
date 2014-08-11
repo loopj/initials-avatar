@@ -3,6 +3,7 @@ Initials Avatar
 
 Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback. For example:
 
+
 ## Usage
 
 ### Basic Usage
@@ -47,7 +48,6 @@ http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fi
 ```
 
 
-
 ## Dependencies
 
 This app requires [ImageMagick](http://www.imagemagick.org/) and [Ghostscript](http://www.ghostscript.com/) to be installed:
@@ -82,13 +82,15 @@ For running locally, I recommend using the `rackup` command:
 $ rackup
 ```
 
-### Passenger Standalone
+### Docker
 
-If you wish to run this in production, [Passenger Standalone](https://www.phusionpassenger.com/documentation/Users%20guide%20Standalone.html) is a great solution:
+You can run this in production using [Docker](https://docker.com) as follows:
 
 ```shell
-$ sudo passenger start --daemonize --port 80
+$ docker pull loopj/initials-avatar
+$ docker run -p 80:80 loopj/initials-avatar
 ```
+
 
 ### Mounting Under a Rails App
 
