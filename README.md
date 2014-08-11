@@ -3,7 +3,49 @@ Initials Avatar
 
 Generate an avatar image from a user's initials, ideal for use as a meaningful gravatar fallback. For example:
 
-![Example avatar](example.png)
+## Usage
+
+### Basic Usage
+
+Generate a 100x100 avatar for the initials *JD*:
+
+```
+http://initials.me/jd
+```
+
+![Basic avatar](http://initials.me/jd)
+
+
+### Specifying Size
+
+Generate an 50x50 avatar for the initials *JS*:
+
+```
+http://initials.me/js?s=50
+```
+
+![50x50 avatar](http://initials.me/js?s=50)
+
+
+### Specifying Colors
+
+Generate an avatar with custom foreground/background colors:
+
+```
+http://initials.me/js?s=50&fg=336699&bg=ffcc00
+```
+
+![Colored avatar](http://initials.me/yo?s=50&fg=336699&bg=ffcc00)
+
+
+### Use as a Gravatar Fallback
+
+Show the [Gravatar](http://gravatar.com) for a particular user, and fallback to showing their initials (*JD*) if the Gravatar doesn't exist:
+
+```
+http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Finitials.me%2FJD
+```
+
 
 
 ## Dependencies
@@ -57,31 +99,3 @@ match "/initials-avatar" => InitialsAvatar, :anchor => false
 ```
 
 You can then access avatars at /initials-avatar/:initials from your rails app.
-
-
-## Usage
-
-Generate a 100x100 avatar for the initials *JD*:
-
-```
-http://localhost:9292/jd
-```
-
-Generate an 80x80 avatar for the initials *JS*:
-
-```
-http://localhost:9292/js?s=80
-```
-
-Show the [Gravatar](http://gravatar.com) for a particular user, and fallback to showing their initials (*JD*) if the Gravatar doesn't exist:
-
-```
-http://www.gravatar.com/avatar/00000000000000000000000000000000?d=http%3A%2F%2Fexample.com%2FJD
-```
-
-
-## TODO
-
--   Image caching
--   Font selection
--   Color selection

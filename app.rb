@@ -14,12 +14,22 @@ class InitialsAvatar < Sinatra::Base
   RESIZE_FILTER = Magick::LagrangeFilter
   RESIZE_BLUR = 1
 
+  HEX_REGEX = /([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
+
   get "/" do
     redirect "https://github.com/loopj/initials-avatar"
   end
 
   get "/:initials.?:format?" do
     content_type "image/png"
+
+    # Background color
+    background_color = params[:bg] ? "#{params[:bg]}" : "DBDBDB"
+    background_color = "#" << background_color if background_color =~ HEX_REGEX
+
+    # Fill / Foreground color
+    fill = params[:fg] ? "#{params[:fg]}" : "000000"
+    fill = "#" << fill if fill =~ HEX_REGEX
 
     # Output/canvas sizes
     output_size = params[:s] ? params[:s].to_i : DEFAULT_OUTPUT_SIZE
@@ -28,12 +38,12 @@ class InitialsAvatar < Sinatra::Base
     # Create the canvas
     img = Magick::Image.new(canvas_size, canvas_size) do
       self.format = "png"
-      self.background_color = "#DBDBDB"
+      self.background_color = background_color
     end
 
     # Create the text annotation
     Magick::Draw.new.annotate(img, canvas_size,canvas_size,0,canvas_size*Y_OFFSET, params[:initials][0..2].upcase) do
-      self.fill = "#000000"
+      self.fill = fill
       self.gravity = Magick::CenterGravity
       self.pointsize = canvas_size*FONT_RATIO
       self.font_weight = Magick::BoldWeight
