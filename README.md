@@ -14,7 +14,7 @@ Generate a 100x100 avatar for the initials *JD*:
 http://initials.me/jd
 ```
 
-![Basic avatar](http://initials.me/jd)
+![Basic avatar](examples/jd.png)
 
 
 ### Specifying Size
@@ -25,7 +25,7 @@ Generate an 50x50 avatar for the initials *JS*:
 http://initials.me/js?s=50
 ```
 
-![50x50 avatar](http://initials.me/js?s=50)
+![50x50 avatar](examples/js-50.png)
 
 
 ### Specifying Colors
@@ -36,7 +36,7 @@ Generate an avatar with custom foreground/background colors:
 http://initials.me/js?s=50&fg=336699&bg=ffcc00
 ```
 
-![Colored avatar](http://initials.me/yo?s=50&fg=336699&bg=ffcc00)
+![Colored avatar](examples/yo-50-yellow.png)
 
 
 ### Use as a Gravatar Fallback
